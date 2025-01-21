@@ -1,0 +1,2 @@
+@ECHO OFF
+"C:\Program Files (x86)\Atmel\AVR Tools\AvrAssembler2\avrasm2.exe" -S "C:\practicasUcontralor\practicas\practica3Retardo\labels.tmp" -fI -W+ie -C V3 -o "C:\practicasUcontralor\practicas\practica3Retardo\retardo.hex" -d "C:\practicasUcontralor\practicas\practica3Retardo\retardo.obj" -e "C:\practicasUcontralor\practicas\practica3Retardo\retardo.eep" -m "C:\practicasUcontralor\practicas\practica3Retardo\retardo.map" "C:\practicasUcontralor\practicas\practica3Retardo\retardo.asm"
