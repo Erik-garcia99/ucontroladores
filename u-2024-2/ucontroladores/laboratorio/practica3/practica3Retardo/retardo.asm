@@ -121,7 +121,7 @@ prestarBits:
 	;poner en 0 logico a PE1, el bit 1 del puerto E 
 ciclo:
 
-	
+	nop
 	rcall miRetardo ;espera 103 uSegundos
 	
 	;pasar el LSB de r24 a carry, por el MSB entra  un 0

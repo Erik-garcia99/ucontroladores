@@ -1,5 +1,5 @@
 
-AVRASM ver. 2.1.42  C:\practicasUcontralor\practicas\practica3Retardo\retardo.asm Thu Sep 26 17:51:10 2024
+AVRASM ver. 2.1.42  C:\Users\erikG\OneDrive\Documents\ciclo2025-1\ucontroladores2025-1\u-2024-2\ucontroladores\laboratorio\practica3\practica3Retardo\retardo.asm Fri Feb 28 18:46:58 2025
 
 
 EQU  SIGNATURE_000 0000001e
@@ -1366,6 +1366,6 @@ CSEG nxt0         00000017
 CSEG nxt1         0000001b
 CSEG nxt2         0000001f
 CSEG ciclo        0000002a
-CSEG carrySet     00000036
-CSEG carryClear   00000039
-CSEG segundoPaso  0000002e
+CSEG carrySet     00000037
+CSEG carryClear   0000003a
+CSEG segundoPaso  0000002f

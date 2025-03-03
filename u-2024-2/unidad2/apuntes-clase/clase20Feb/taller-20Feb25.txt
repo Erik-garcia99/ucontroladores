@@ -1,6 +1,7 @@
 retardo por software es medinate un bucle, en C seria un while o un for, el ASM simulamos la fucnion del while. 
 
-un retardo depende de: las veces que se realiza el ciclo, codigo que genera el compilador, la velocidad del procesador, la univa variante que tenemos control es sobre las veces que se repite el ciclo. 
+un retardo depende de: las veces que se realiza el ciclo, codigo que genera el compilador, la velocidad del procesador, la univa variante que
+tenemos control es sobre las veces que se repite el ciclo. 
 
 # ciclos = 20
 
