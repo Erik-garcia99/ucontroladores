@@ -14,7 +14,13 @@ ldi R24,INIT_VALUE
 ;call myRand ; Retorna valor en R25
 ;------------- ciclo principal --------------------------------------
 
+rcall retardo1mS
+
+nop
+
 rcall miRetardo
+
+
 
 nop
 
@@ -38,23 +44,25 @@ abajo: dec R24
 ;creo que es retardo de 103uS
 
 miRetardo: 
-	clr r25 ; 
-	clr r26 ;
-	clr r23	;1 ciclo -> R24 -> R23 
-	ldi r23,5 ;-> 1 -> x
-	ldi r26, 7
+	clr r20 ; R25 -> R20 
+	clr r21 ; R26 -> R21
+	clr r22	;1 ciclo -> R24 -> R22
+
+
+	ldi r22,5 ;-> 1 -> x
+	ldi r21, 7
 	;--------
 	;5 ciclos total
 nxt0:
 	nop ; ->1x
 	nop; 1x
 	nop ;1x
-	ldi r25, 8 ;1x
+	ldi r20, 8 ;1x
 	;-------
 	;4x
 	
 nxt1:
-	dec r26 ;1zyx
+	dec r21 ;1zyx
 	nop ;1zyx
 	nop ;1xyz
 	brne nxt1 ; 2xy(z-1)
@@ -62,15 +70,15 @@ nxt1:
 	;3xyz + 2xy(z-1)
 	
 nxt2:
-	ldi r26,7 ;-> 1xy
+	ldi r21,7 ;-> 1xy
 	nop ; 1xy
 	nop ;1xy
-	dec r25	;-> 1xy
+	dec r20	;-> 1xy
 	brne nxt1 ; 2x(y-1)
 	;---------------------
 	;4xy + 2x(y-1)
 
-	dec r23 ;x -> 1x
+	dec r22 ;x -> 1x
 	nop ; 1x
 	brne nxt0 ;-> 2(x-1)
 
@@ -87,36 +95,49 @@ nxt2:
 retardo1mS:
 
 	; rcall -> 4 ciclos
-	clr r25 ; x -> 1
-	clr r26 ; y  -> 1
-	clr r23 ; z -> 1
-
 
 	; para un retardo de 1mS es necesario 16,000 ticks 
 	; esto porque (1x10^-3)*(16x10^6)  -> 16,000 
 
 
-	; tomamos nuestra muestra esquelto 
+; -> retardo con 3 ciclos, creo que con este sera mejor 
 
-	ldi r25, x
-	ldi r26, y 
-	nxt0:
-		dec r25
-		brne nxt0
+	;calculos: 
 
-		nxt1:
+	; 4 + 5 + 4 + 1x+ 1xy+ 1xyz+ xy(2z-1) + 1xy + x(2y-1) + 1x+ (2x-1)
 
-			dec r26
-			brne nxt1
 
+
+
+	ldi r20, 15 ; 1
+	nop
 	
-	ret ; -> 5 ciclos
+
+	nxt_mS: 
+
+	; este es el ciclo superior a todos 
+	ldi r21, 59 ; 1x 
+	nop
+
+		nxt1_mS:
+
+		ldi r22, 5 ; 1xy
+
+			nxt2_mS: 
+	
+			; este en el ciclo mas pequenio. en el ciclo 
+
+			dec r22 ; 1xyz
+			brne nxt2_mS ; xy(2z-1)
+
+		dec r21 ;1xy
+		brne nxt1_mS ; x(2y-1)
+
+	dec r20 ; 1x
+	brne nxt_mS ; 2x-1
 
 
-
-
-
-
+	ret ; final del delay
 
 
 

@@ -1,5 +1,5 @@
 
-AVRASM ver. 2.1.42  C:\Users\erikG\OneDrive\Documents\ciclo2025-1\ucontroladores2025-1\u-2024-2\laboratorio\repo-avance\lab3\proyec_avr-Studio\Lab3.asm Fri Feb 28 21:58:19 2025
+AVRASM ver. 2.1.42  C:\Users\erikG\OneDrive\Documents\ciclo2025-1\ucontroladores2025-1\u-2024-2\laboratorio\repo-avance\lab3\proyec_avr-Studio\Lab3.asm Wed Mar 05 13:06:27 2025
 
 
 EQU  SIGNATURE_000 0000001e
@@ -1360,9 +1360,13 @@ EQU  UDRE3addr    0000006e
 EQU  UTXC3addr    00000070
 EQU  INT_VECTORS_SIZE 00000072
 EQU  INIT_VALUE   00000000
-CSEG miRetardo    0000000d
-CSEG arriba       00000003
-CSEG abajo        00000008
-CSEG nxt0         00000012
-CSEG nxt1         00000016
-CSEG nxt2         0000001a
+CSEG retardo1mS   00000025
+CSEG miRetardo    0000000f
+CSEG arriba       00000005
+CSEG abajo        0000000a
+CSEG nxt0         00000014
+CSEG nxt1         00000018
+CSEG nxt2         0000001c
+CSEG nxt_mS       00000027
+CSEG nxt1_mS      00000029
+CSEG nxt2_mS      0000002a
