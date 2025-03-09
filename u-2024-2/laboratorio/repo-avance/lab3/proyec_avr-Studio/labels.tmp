@@ -19,15 +19,20 @@
   <FILE>C:\Users\erikG\OneDrive\Documents\ciclo2025-1\ucontroladores2025-1\u-2024-2\laboratorio\repo-avance\lab3\proyec_avr-Studio\Lab3.map</FILE>
  </OUTPUT_FILES>
  <LABELS>
-  <retardo1mS><FILE>C:\Users\erikG\OneDrive\Documents\ciclo2025-1\ucontroladores2025-1\u-2024-2\laboratorio\repo-avance\lab3\proyec_avr-Studio\Lab3.asm</FILE><LINE>95</LINE></retardo1mS>
-  <miRetardo><FILE>C:\Users\erikG\OneDrive\Documents\ciclo2025-1\ucontroladores2025-1\u-2024-2\laboratorio\repo-avance\lab3\proyec_avr-Studio\Lab3.asm</FILE><LINE>46</LINE></miRetardo>
-  <arriba><FILE>C:\Users\erikG\OneDrive\Documents\ciclo2025-1\ucontroladores2025-1\u-2024-2\laboratorio\repo-avance\lab3\proyec_avr-Studio\Lab3.asm</FILE><LINE>28</LINE></arriba>
-  <abajo><FILE>C:\Users\erikG\OneDrive\Documents\ciclo2025-1\ucontroladores2025-1\u-2024-2\laboratorio\repo-avance\lab3\proyec_avr-Studio\Lab3.asm</FILE><LINE>35</LINE></abajo>
-  <nxt0><FILE>C:\Users\erikG\OneDrive\Documents\ciclo2025-1\ucontroladores2025-1\u-2024-2\laboratorio\repo-avance\lab3\proyec_avr-Studio\Lab3.asm</FILE><LINE>56</LINE></nxt0>
-  <nxt1><FILE>C:\Users\erikG\OneDrive\Documents\ciclo2025-1\ucontroladores2025-1\u-2024-2\laboratorio\repo-avance\lab3\proyec_avr-Studio\Lab3.asm</FILE><LINE>64</LINE></nxt1>
-  <nxt2><FILE>C:\Users\erikG\OneDrive\Documents\ciclo2025-1\ucontroladores2025-1\u-2024-2\laboratorio\repo-avance\lab3\proyec_avr-Studio\Lab3.asm</FILE><LINE>72</LINE></nxt2>
-  <nxt_mS><FILE>C:\Users\erikG\OneDrive\Documents\ciclo2025-1\ucontroladores2025-1\u-2024-2\laboratorio\repo-avance\lab3\proyec_avr-Studio\Lab3.asm</FILE><LINE>116</LINE></nxt_mS>
-  <nxt1_mS><FILE>C:\Users\erikG\OneDrive\Documents\ciclo2025-1\ucontroladores2025-1\u-2024-2\laboratorio\repo-avance\lab3\proyec_avr-Studio\Lab3.asm</FILE><LINE>122</LINE></nxt1_mS>
-  <nxt2_mS><FILE>C:\Users\erikG\OneDrive\Documents\ciclo2025-1\ucontroladores2025-1\u-2024-2\laboratorio\repo-avance\lab3\proyec_avr-Studio\Lab3.asm</FILE><LINE>126</LINE></nxt2_mS>
+  <numero_random><FILE>C:\Users\erikG\OneDrive\Documents\ciclo2025-1\ucontroladores2025-1\u-2024-2\laboratorio\repo-avance\lab3\proyec_avr-Studio\Lab3.asm</FILE><LINE>178</LINE></numero_random>
+  <retardo_103uS><FILE>C:\Users\erikG\OneDrive\Documents\ciclo2025-1\ucontroladores2025-1\u-2024-2\laboratorio\repo-avance\lab3\proyec_avr-Studio\Lab3.asm</FILE><LINE>58</LINE></retardo_103uS>
+  <retardo_1mS><FILE>C:\Users\erikG\OneDrive\Documents\ciclo2025-1\ucontroladores2025-1\u-2024-2\laboratorio\repo-avance\lab3\proyec_avr-Studio\Lab3.asm</FILE><LINE>109</LINE></retardo_1mS>
+  <retardo_1S><FILE>C:\Users\erikG\OneDrive\Documents\ciclo2025-1\ucontroladores2025-1\u-2024-2\laboratorio\repo-avance\lab3\proyec_avr-Studio\Lab3.asm</FILE><LINE>156</LINE></retardo_1S>
+  <arriba><FILE>C:\Users\erikG\OneDrive\Documents\ciclo2025-1\ucontroladores2025-1\u-2024-2\laboratorio\repo-avance\lab3\proyec_avr-Studio\Lab3.asm</FILE><LINE>40</LINE></arriba>
+  <abajo><FILE>C:\Users\erikG\OneDrive\Documents\ciclo2025-1\ucontroladores2025-1\u-2024-2\laboratorio\repo-avance\lab3\proyec_avr-Studio\Lab3.asm</FILE><LINE>47</LINE></abajo>
+  <nxt0><FILE>C:\Users\erikG\OneDrive\Documents\ciclo2025-1\ucontroladores2025-1\u-2024-2\laboratorio\repo-avance\lab3\proyec_avr-Studio\Lab3.asm</FILE><LINE>70</LINE></nxt0>
+  <nxt1><FILE>C:\Users\erikG\OneDrive\Documents\ciclo2025-1\ucontroladores2025-1\u-2024-2\laboratorio\repo-avance\lab3\proyec_avr-Studio\Lab3.asm</FILE><LINE>78</LINE></nxt1>
+  <nxt2><FILE>C:\Users\erikG\OneDrive\Documents\ciclo2025-1\ucontroladores2025-1\u-2024-2\laboratorio\repo-avance\lab3\proyec_avr-Studio\Lab3.asm</FILE><LINE>86</LINE></nxt2>
+  <nxt_mS><FILE>C:\Users\erikG\OneDrive\Documents\ciclo2025-1\ucontroladores2025-1\u-2024-2\laboratorio\repo-avance\lab3\proyec_avr-Studio\Lab3.asm</FILE><LINE>124</LINE></nxt_mS>
+  <nxt1_mS><FILE>C:\Users\erikG\OneDrive\Documents\ciclo2025-1\ucontroladores2025-1\u-2024-2\laboratorio\repo-avance\lab3\proyec_avr-Studio\Lab3.asm</FILE><LINE>130</LINE></nxt1_mS>
+  <nxt2_mS><FILE>C:\Users\erikG\OneDrive\Documents\ciclo2025-1\ucontroladores2025-1\u-2024-2\laboratorio\repo-avance\lab3\proyec_avr-Studio\Lab3.asm</FILE><LINE>134</LINE></nxt2_mS>
+  <nxt_S><FILE>C:\Users\erikG\OneDrive\Documents\ciclo2025-1\ucontroladores2025-1\u-2024-2\laboratorio\repo-avance\lab3\proyec_avr-Studio\Lab3.asm</FILE><LINE>160</LINE></nxt_S>
+  <nxt2_S><FILE>C:\Users\erikG\OneDrive\Documents\ciclo2025-1\ucontroladores2025-1\u-2024-2\laboratorio\repo-avance\lab3\proyec_avr-Studio\Lab3.asm</FILE><LINE>164</LINE></nxt2_S>
+  <nxt3_S><FILE>C:\Users\erikG\OneDrive\Documents\ciclo2025-1\ucontroladores2025-1\u-2024-2\laboratorio\repo-avance\lab3\proyec_avr-Studio\Lab3.asm</FILE><LINE>167</LINE></nxt3_S>
  </LABELS>
 </ASSEMBLER_INFO>

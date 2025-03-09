@@ -1,5 +1,5 @@
 ;------------- definiciones e includes ------------------------------
-
+;INCLUDE "m1280def.inc" ; Incluir definiciones de Registros para 1280
 
 .INCLUDE "m2560def.inc" ; Incluir definiciones de Registros para 2560
 
@@ -14,27 +14,19 @@ ldi R24,INIT_VALUE
 ;call myRand ; Retorna valor en R25
 ;------------- ciclo principal --------------------------------------
 
-
-in r25, TCNT0
-call numero_random
-nop
-
-
-rcall retardo_103uS
-nop
-
-
-rcall retardo_1mS
-nop
-
 rcall retardo_1S
 nop
 
 
+rcall retardo1mS
+
+nop
+
+rcall miRetardo
 
 
 
-
+nop
 
 
 arriba: inc R24
@@ -53,14 +45,12 @@ abajo: dec R24
 
 
 
+;creo que es retardo de 103uS
 
-
-retardo_103uS: 
-
-	;4 ciclos rcall
-	clr r20 ;1
-	clr r21 ; 1
-	clr r22	;1 
+miRetardo: 
+	clr r20 ; R25 -> R20 
+	clr r21 ; R26 -> R21
+	clr r22	;1 ciclo -> R24 -> R22
 
 
 	ldi r22,5 ;-> 1 -> x
@@ -79,34 +69,34 @@ nxt1:
 	dec r21 ;1zyx
 	nop ;1zyx
 	nop ;1xyz
-	brne nxt1 ; xy(2z-1)
+	brne nxt1 ; 2xy(z-1)
 	;----------
-	;3xyz + xy(2z-1)
+	;3xyz + 2xy(z-1)
 	
 nxt2:
 	ldi r21,7 ;-> 1xy
 	nop ; 1xy
 	nop ;1xy
 	dec r20	;-> 1xy
-	brne nxt1 ; x(2y-1)
+	brne nxt1 ; 2x(y-1)
 	;---------------------
-	;4xy + x(2y-1)
+	;4xy + 2x(y-1)
 
 	dec r22 ;x -> 1x
 	nop ; 1x
-	brne nxt0 ;-> (2x-1)
+	brne nxt0 ;-> 2(x-1)
 
 	ret ;5 ciclos
 
 	;-------------
-	;2x+(2x-1)+5
+	;2x+2(x-1)+5
 
 	;--------------------------
-	;7x + 5xy + 5xyz + 13 
+	;7x + 4xy + 5xyz + 12 
 
 
 
-retardo_1mS:
+retardo1mS:
 
 	; rcall -> 4 ciclos
 
@@ -114,18 +104,24 @@ retardo_1mS:
 	; esto porque (1x10^-3)*(16x10^6)  -> 16,000 
 
 
+; -> retardo con 3 ciclos, creo que con este sera mejor 
+
+	;calculos: 
+
+	; 4 + 5 + 4 + 1x+ 1xy+ 1xyz+ xy(2z-1) + 1xy + x(2y-1) + 1x+ (2x-1)
+
+
 
 
 	ldi r20, 15 ; 1
 	nop
-	
 	
 
 	nxt_mS: 
 
 	; este es el ciclo superior a todos 
 	ldi r21, 59 ; 1x 
-	nop ;1x
+	nop
 
 		nxt1_mS:
 
@@ -151,42 +147,56 @@ retardo_1mS:
 
 
 
+retardo_1S: 
 
 
-retardo_1S:
+;utilizaremos igual 3 ciclos para facilitarnos el manejo de un numero tan grande de ciclos 
 
-	ldi r20, 241;	
-	nop				;1 	
-		nxt_S: ldi r21, 144;  		/x
-		nop;						/x
-		nop;						/x
-		nop;						/x
-			nxt2_S:ldi r22, 152 ; 	/xy
-			nop;					/xy
-			nop;					/xy
-				nxt3_S:dec r22; 	/xyz
-				brne nxt3_S;	 	/xy(2z-1)
-			dec r21; 				/xy
-			brne nxt2_S;	 		/x(2y-1)
-		dec r20;	 				/x
-		brne nxt_S;		 			/2x-1
+; 1S = 16,000,000 de ciclos 
+
+	; de primera instancia tenemos 4 y 5 ciclos de entrada y salida, tendremos 1 para el ciclo superior
+
+
+	; 4 + 5 + 1
+
+
+
+
+	ldi r20, 199 ; 1 
+
+	nxt_S:
+
+	ldi r21, 200 ; 1x
+
+	
+	nxt2_S:
+
+	ldi r22, 133 ; 1xy
+
+
+	nxt3_S: 
+	dec r22 ;1xyz
+
+	brne nxt3_S ;xy(2z-1)
+
+	dec r21 ; 1xy
+	brne nxt2_S ; x(2y-1)
+
+	dec r20 ; 1x
+	brne nxt_S ; 2x-1
+
 
 
 	ret
 
 
-numero_random:
 
-	ldi r17, 0xA5 ; cargamos el multiplicador en r17
 
-	mul r25, r17 ; multiplicamos el valor de r25 * r17, cuyos valores se van 
-	; a R0 y R1
-	ldi r17, 1 ; cargamose l incrementos 
-	add r0, r17 ; sumaos este incremento al byte bajo 
 
-	mov r25, r0 ; el byte bajo lo movemos a r25 para obtener ese valor aleatorio
 
-ret
+
+
+
 
 
 
