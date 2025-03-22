@@ -1,7 +1,10 @@
 /******************************************************************************
 Prac 2 - AVR ASM OpCode Decoder
 *******************************************************************************/
-
+/*garcia chavez erik 01275863
+practica 2 microcontroladores
+2025-1
+*/
 #include <stdio.h>
 #include <inttypes.h>
 
